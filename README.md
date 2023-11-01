@@ -1,16 +1,16 @@
 # BiopREL Data Analysis Project
 
 ## 🎯 Summary of the project
-This project is centered around the exploration and utilization of hydrogels, with a spotlight on methacryloyl salmon gelatin-based microgels. The goal is to achieve controlled crosslinking densities and curcumin release profiles via a cutting-edge spray congealing system coupled with UV radiation. The journey will delve into the advantages of gelatin-based hydrogels in terms of biocompatibility, biodegradability, and the potential to modify mechanical properties through chemical crosslinking. A key part of this endeavor is the calculation of the Young Modulus to unravel the mechanical traits of these hydrogels, which is vital for their application in diverse domains like bioactive compound delivery in functional foods, pharmaceuticals, and tissue engineering, among others.
+This project is centered around the exploration and utilization of hydrogels, with a spotlight on methacryloyl salmon and porcine based gelatin-based microgels. The goal is to achieve controlled crosslinking densities and curcumin release profiles via a cutting-edge spray congealing system coupled with UV radiation. The project delves into the advantages of gelatin-based hydrogels in terms of biocompatibility, biodegradability, and the potential to modify mechanical properties through chemical crosslinking. A key part of this endeavor is the calculation of the Young Modulus to unravel the mechanical traits of these hydrogels, which is vital for their application in diverse domains like bioactive compound delivery in functional foods, pharmaceuticals, and tissue engineering, among others.
 
 ## 🐟 Salmon and Porcine Gelatin
-The adventure begins with the exploration of salmon and porcine gelatin as the foundation for creating GelMa (Gelatin methacryloyl) and, subsequently, hydrogels. The intrinsic differences in the thermal and viscoelastic properties of these gelatins and their impact on the functionality and mechanical strength of the resultant hydrogels will be unfolded. The quest encompasses the preparation and characterization of gelatin suspensions by blending salmon (SG) and porcine (PG) gelatins at different weight fractions, followed by their functionalization to concoct GelMa with a variety of properties.
+Salmon and porcine gelatin are the foundation for creating GelMa (Gelatin methacryloyl) and, subsequently, hydrogels. The aim in this poject is to determine the intrinsic differences in the thermal and viscoelastic properties of these gelatins and their impact on the functionality and mechanical strength of the resultant hydrogels when mixing both gelatin sources. The project encompasses the preparation and characterization of gelatin suspensions by blending salmon (SG) and porcine (PG) gelatins at different weight fractions, followed by their functionalization to concoct GelMa with a variety of properties.
 
 ## 📊 How Data is obtained
-The data treasure will be unearthed from a series of experiments encompassing the preparation and characterization of GelMa macrogels and microgels with controlled crosslinking densities, alongside the analysis of curcumin release profiles. A novel concoction of spray congealing merged with real-time UV crosslinking is proposed for forging methacryloyl salmon gelatin-based microgels. The narrative aims to control crosslinking densities and curcumin release profiles, pivotal parameters that will be interlinked to fathom the structuring of GelMa microgels and the efficacy of bioactive compound encapsulation and release.
+The data treasure will be unearthed from a series of experiments encompassing the preparation and characterization of GelMa macrogels through the use of a rheometer and texturometer obtaining stress and stress data, that can later be utilized to determine the mechanical properties of the hydrogels or gelatin.
 
 ## 📈 Young Modulus
-Diving into the calculation of Young's Modulus is quintessential to decoding the mechanical behavior of the hydrogels under varied conditions. This mechanical metric is crucial for tailoring hydrogels for specific applications, especially in scenarios requiring a fine balance between flexibility, strength, and elasticity. The correlation between the crosslinking densities, the source of gelatin (salmon or porcine), and the resultant Young's Modulus of the hydrogels will furnish a comprehensive insight into the mechanical viability of these hydrogels for their proposed applications. Through the juxtaposition of compressive modulus among hydrogels derived from different gelatin sources and crosslinking strategies, a clearer comprehension of how to optimize these materials for desired mechanical and functional outcomes will be achieved.
+Diving into the calculation of Young's Modulus is quintessential to decoding the mechanical behavior of the hydrogels under varied conditions. This mechanical metric is crucial for tailoring hydrogels for specific applications, especially in scenarios requiring a fine balance between flexibility, strength, and elasticity. The correlation between the crosslinking densities, the source of gelatin (salmon or porcine), and the resultant Young's Modulus of the hydrogels will furnish a comprehensive insight into the mechanical properties of these hydrogels for their proposed applications. Through the juxtaposition of compressive modulus among hydrogels derived from different gelatin sources and crosslinking strategies, a clearer comprehension of how to optimize these materials for desired mechanical and functional outcomes will be achieved.
 
 ## 🐍 Data Processing using Python
 
@@ -18,16 +18,12 @@ Diving into the calculation of Young's Modulus is quintessential to decoding the
     - Import essential libraries:
     ```python
     import pandas as pd
-    from PyQt5.QtWidgets import QApplication, QFileDialog
     import numpy as np
     ```
-    - Define `select_files(title)` for multi-file selection via a GUI dialog.
-    - Prompt user for the number of file sets for analysis.
-    - Employ `select_files` to select files for each set.
 
 2. **📦 Data Import, Aggregation, and Initial Viewing**:
     - Loop through each file, read based on their extensions (`.xls` or `.xlsx`), and log any reading errors.
-    - Amalgamate data from each file into `master_df`.
+    - Amalgamate data from each file into `master_df` a dataframe with stress and strain data.
     - Display `master_df` contents to view the aggregated data.
 
 3. **🔄 Data Processing, Cleaning, and Filtering**:
@@ -54,7 +50,7 @@ Diving into the calculation of Young's Modulus is quintessential to decoding the
 With the Python data processing and visualization steps delineated, the following phases will focus on the deeper analysis of the data, correlating the findings with the theoretical framework, and evaluating the implications of the results. The knowledge gleaned from the Young Modulus calculations, alongside the analysis of the crosslinking densities and curcumin release profiles, will be instrumental in steering the subsequent stages of this project.
 
 ## 🌐 Collaboration
-Open collaboration is encouraged to enhance the project's breadth and depth. Contributions from the community can provide fresh perspectives, novel solutions, and valuable insights that can significantly propel the project forward.
+This project is part of Fondecyt project in the BiopREL laboratory.
 
 ## 📬 Contact
 For queries, suggestions, or collaborations, feel free to reach out. This project aims to cultivate a community of learners and innovators keen on advancing the understanding and application of hydrogels.
