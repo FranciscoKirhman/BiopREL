@@ -1,60 +1,83 @@
 # BiopREL Data Analysis Project
 
 ## 🎯 Summary of the project
-This project is centered around the exploration and utilization of hydrogels, with a spotlight on methacryloyl salmon and porcine based gelatin-based microgels. The goal is to achieve controlled crosslinking densities and curcumin release profiles via a cutting-edge spray congealing system coupled with UV radiation. The project delves into the advantages of gelatin-based hydrogels in terms of biocompatibility, biodegradability, and the potential to modify mechanical properties through chemical crosslinking. A key part of this endeavor is the calculation of the Young Modulus to unravel the mechanical traits of these hydrogels, which is vital for their application in diverse domains like bioactive compound delivery in functional foods, pharmaceuticals, and tissue engineering, among others.
+This project explores the development and analysis of hydrogels, focusing on methacryloyl derivatives from salmon and porcine gelatin (GelMa). Our objective is to control the crosslinking densities and study the release profiles of curcumin, which could have significant implications in bioactive compound delivery systems. This research is pivotal for advancing applications in functional foods, pharmaceuticals, and tissue engineering, with a particular emphasis on optimizing the Young Modulus to tailor the hydrogels' mechanical properties.
 
 ## 🐟 Salmon and Porcine Gelatin
-Salmon and porcine gelatin are the foundation for creating GelMa (Gelatin methacryloyl) and, subsequently, hydrogels. The aim in this poject is to determine the intrinsic differences in the thermal and viscoelastic properties of these gelatins and their impact on the functionality and mechanical strength of the resultant hydrogels when mixing both gelatin sources. The project encompasses the preparation and characterization of gelatin suspensions by blending salmon (SG) and porcine (PG) gelatins at different weight fractions, followed by their functionalization to concoct GelMa with a variety of properties.
+The core of this project lies in comparing salmon (SG) and porcine gelatin (PG) to create GelMa hydrogels. By understanding the thermal and viscoelastic differences between SG and PG, we can fine-tune the hydrogels' mechanical strengths and functionalities. The methodology includes blending these gelatins in various ratios, followed by UV-induced crosslinking to fabricate hydrogels with diverse properties.
 
 ## 📊 How Data is obtained
-The data treasure will be unearthed from a series of experiments encompassing the preparation and characterization of GelMa macrogels through the use of a rheometer and texturometer obtaining stress and stress data, that can later be utilized to determine the mechanical properties of the hydrogels or gelatin.
+Data is sourced from experimental setups involving rheometers and texturometers, which measure the stress and strain of gelatin macrogels. This empirical data forms the foundation for analyzing the mechanical characteristics of the developed hydrogels.
 
 ## 📈 Young Modulus
-Diving into the calculation of Young's Modulus is quintessential to decoding the mechanical behavior of the hydrogels under varied conditions. This mechanical metric is crucial for tailoring hydrogels for specific applications, especially in scenarios requiring a fine balance between flexibility, strength, and elasticity. The correlation between the crosslinking densities, the source of gelatin (salmon or porcine), and the resultant Young's Modulus of the hydrogels will furnish a comprehensive insight into the mechanical properties of these hydrogels for their proposed applications. Through the juxtaposition of compressive modulus among hydrogels derived from different gelatin sources and crosslinking strategies, a clearer comprehension of how to optimize these materials for desired mechanical and functional outcomes will be achieved.
+The Young Modulus calculation is crucial for understanding the elasticity and strength of hydrogels, impacting their suitability for different biomedical applications. We analyze how varying crosslinking densities and the origin of gelatin affect the hydrogels' Young Modulus, providing insights into their mechanical adaptability.
 
 ## 🐍 Data Processing using Python
 
-1. **🛠 Initial Setup and File Selection**:
-    - Import essential libraries:
-    ```python
-    import pandas as pd
-    import numpy as np
-    ```
+### 🛠 Initial Setup and File Selection
+- **Libraries Imported**:
+  - `matplotlib.pyplot`: For plotting graphs and visualizing data trends.
+  - `pandas`: Essential for data manipulation and analysis.
+  - `ipywidgets`: Creates interactive elements in Jupyter notebooks.
+  - `PyQt5.QtWidgets`: Facilitates file selection dialogs in the notebook environment.
+  - `winsound` and `time`: Used for notification sounds and time tracking during data processing tasks.
 
-2. **📦 Data Import, Aggregation, and Initial Viewing**:
-    - Loop through each file, read based on their extensions (`.xls` or `.xlsx`), and log any reading errors.
-    - Amalgamate data from each file into `master_df` a dataframe with stress and strain data.
-    - Display `master_df` contents to view the aggregated data.
+### 📦 Data Import, Aggregation, and Initial Viewing
+- **Data Handling**: Scripts automate the import of data from various file formats, compiling them into a master DataFrame. This initial aggregation phase is crucial for subsequent analysis phases.
+- **Initial Data Checks**: Quick visualizations and summaries help identify data inconsistencies or missing values right after import.
 
-3. **🔄 Data Processing, Cleaning, and Filtering**:
-    - Create `process_data_from_master_df(row)` to process each `master_df` row, extracting vital information.
-    - Process each row using the defined function, convert to `final_df`.
-    - Craft `data_cleaned` DataFrame by dropping rows with NaN values in 'Time' and 'Stress' from `final_df`.
-    - Prepare for visualization: create 'Legend' column in `data_cleaned`, determine peak stress index, and create `filtered_df`.
+### 🔄 Data Processing, Cleaning, and Filtering
+- **Outlier Removal**: Utilizes statistical methods (e.g., IQR) to identify and exclude outliers, ensuring the reliability of subsequent analyses.
+- **Data Transformation**: Transforms raw data into a structured format, suitable for in-depth analysis and comparison between different test conditions.
 
-4. **📊 Data Visualization**:
-    - Employ visualization libraries:
-    ```python
-    import plotly.offline as pyo
-    import plotly.graph_objects as go
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-    import plotly.express as px
-    ```
-    - Forge interactive visualizations:
-        - **Stress vs. Time for All Data**: using cleaned data, color-differentiated by 'Set' and 'File Name' combo.
-        - **Stress vs. Time**: using filtered data up to global peak time, color-varied based on the 'Legend' column.
-    - Exhibit `final_df` and `data_cleaned` DataFrames in a tabular layout within a Jupyter notebook environment.
+### 📊 Data Visualization
+- **Visualization Techniques**: Leverages libraries like `plotly` for interactive plots and `matplotlib` and `seaborn` for static visualizations. These tools are instrumental in analyzing stress vs. time relationships and other critical parameters.
+- **Insights and Patterns**: By visualizing data, we can uncover underlying patterns and relationships that are not immediately apparent from raw datasets, aiding in hypothesis testing and model building.
 
 ## 🔄 Next Steps
-With the Python data processing and visualization steps delineated, the following phases will focus on the deeper analysis of the data, correlating the findings with the theoretical framework, and evaluating the implications of the results. The knowledge gleaned from the Young Modulus calculations, alongside the analysis of the crosslinking densities and curcumin release profiles, will be instrumental in steering the subsequent stages of this project.
+Armed with the processed and visualized data, the next phase involves deeper statistical analysis and theoretical modeling. The ultimate goal is to correlate empirical data with theoretical frameworks, optimizing hydrogel formulation for targeted applications.
 
 ## 🌐 Collaboration
-This project is part of Fondecyt project in the BiopREL laboratory.
+This initiative is part of the broader Fondecyt project within the BiopREL laboratory, aiming to foster a collaborative environment for students and researchers passionate about biomaterials.
 
 ## 📬 Contact
-For queries, suggestions, or collaborations, feel free to reach out. This project aims to cultivate a community of learners and innovators keen on advancing the understanding and application of hydrogels.
+We encourage anyone interested in hydrogel research or looking for collaboration opportunities to reach out. This project is a platform for shared learning and innovation in biomaterials science.
 
----
+## 👥 Team 
+- Francisco Kirhman 
 
-This project structure provides a blueprint for how the BiopREL Data Analysis Project is being undertaken. It encapsulates the initial objectives, the methodology for data acquisition and processing, and lays the foundation for subsequent analytical and developmental steps. Through a blend of theoretical understanding and practical application, the endeavor strives to unravel the potential of methacryloyl salmon gelatin-based microgels in various realms, underpinned by rigorous data analysis using Python.
+## 🚀 Getting Started
+
+To begin working with the BiopREL Data Analysis Project, please follow these instructions:
+
+1. **Clone the repository to your local machine:**
+   ```bash
+   git clone https://github.com/FranciscoKirhman/BiopREL-Data-Analysis-Project.git
+   ```
+
+2. **Open the cloned repository in your preferred development environment:**
+
+   - **For Visual Studio Code users:**
+     Navigate to the cloned directory and open it with Visual Studio Code:
+     ```bash
+     cd BiopREL-Data-Analysis-Project
+     code .
+     ```
+
+   - **For Jupyter Notebook users:**
+     Navigate to the `notebooks/` directory within the cloned repository and launch Jupyter Notebook:
+     ```bash
+     cd notebooks/
+     jupyter notebook
+     ```
+
+3. **Install required Python packages:**
+   Before running any code, ensure all necessary packages are installed. Use the following command in your terminal or command prompt:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Running the project:**
+   You can now run the notebooks directly within Jupyter Notebook or execute Python scripts in Visual Studio Code. The project is configured to use data directly obtained from a rheometer, allowing immediate analysis of real experimental data.
+
+**For any issues or additional questions, please contact Francisco Osorio at [francisco.osorio@ug.uchile.cl](mailto:francisco.osorio@ug.uchile.cl).**
