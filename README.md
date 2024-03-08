@@ -80,4 +80,4 @@ To begin working with the BiopREL Data Analysis Project, please follow these ins
 4. **Running the project:**
    You can now run the notebooks directly within Jupyter Notebook or execute Python scripts in Visual Studio Code. The project is configured to use data directly obtained from a rheometer, allowing immediate analysis of real experimental data.
 
-**For any issues or additional questions, please contact Francisco Osorio at [francisco.osorio@ug.uchile.cl](mailto:francisco.osorio@ug.uchile.cl).**
+**For any issues or additional questions, please contact Francisco Kirhman at [francisco.osorio@ug.uchile.cl](mailto:francisco.osorio@ug.uchile.cl).**
